@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .body-div {
+    margin: 0;
+    height: 100%; 
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    background: #ecf0f3;
+  }
+  
+  .login-div {
+    width: 430px;
+    height: 600px;
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background: #ecf0f3;
+    box-shadow:
+      /* bottom to right side */
+      13px 13px 20px #cbced1,
+      /* top to left side */
+      -13px -13px 20px #fff;
+  }
+  
+  .logo {
+    background: url(./images/dolarIcon.jpg);
+    background-size: 98px 98px;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow:
+      /* logo shadow */
+      0px 0px 2px #5f5f5f,
+      /* offset */
+      0px 0px 0px 5px #ecf0f3,
+      /* bottom to right side */
+      8px 8px 15px #a7aaaf,
+      /* top to left side */
+      -8px -8px 15px #fff;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 24px;
+    letter-spacing: .5px;
+  }
+  
+  .sub-title {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 7px;
+    letter-spacing: 3px;
+  }
+  
+  .fields {
+    width: 100%;
+    padding: 75px 5px 5px 5px;
+  }
+  
+  .fields input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+  }
+  
+  .email,
+  .password {
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow:
+      inset 8px 8px 8px #cbced1;
+    inset: -8px -8px 8px #fff;
+  }
+  
+  .fields svg {
+    height: 22px;
+    margin: 0 10px -3px 25px;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #999;
+  }
+  
+  .svg-icon circle {
+    stroke: #999;
+    stroke-width: 1;
+  }
+  
+  .display-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .submit-button,
+  .switch-button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    text-align: center;
+    background: #ecf0f3;
+    box-shadow:
+      /* offset */
+      0px 0px 0px 5px #ecf0f3,
+      /* bottom to right side */
+      8px 8px 15px #a7aaaf,
+      /* top to left side */
+      -8px -8px 15px #fff;
+    transition: .5s;
+  }
+  
+  .submit-button {
+  
+    width: 30%;
+  }
+  
+  .switch-button {
+  
+    width: 50%;
+  }
+  
+  .submit-button:hover {
+    background: #49c5b6;
+  }
+  
+  .switch-button:hover {
+    background: tomato;
+  }
+  
+  /* .submit-button:active {
+    background: tomato;
+  } */
+  
+  /* .switch-button:active {
+    background: tomato;
+  } */
+
+  .wrong{
+  background: tomato;
+  }
+  
