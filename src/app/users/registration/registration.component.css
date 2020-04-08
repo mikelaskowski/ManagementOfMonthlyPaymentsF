@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .body-div {
+    margin: 0;
+    height: 100%; 
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    background: #ecf0f3;
+  }
+  
+  .register-div {
+    width: 430px;
+    height: 700px;
+    padding: 15px 35px 35px 35px;
+    border-radius: 40px;
+    background: #ecf0f3;
+    box-shadow:
+      /* bottom to right side */
+      13px 13px 20px #cbced1,
+      /* top to left side */
+      -13px -13px 20px #fff;
+  }
+  
+  .logo {
+    /* background: url(./images/dolarIcon.jpg); */
+    background-size: 98px 98px;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow:
+      /* logo shadow */
+      0px 0px 2px #5f5f5f,
+      /* offset */
+      0px 0px 0px 5px #ecf0f3,
+      /* bottom to right side */
+      8px 8px 15px #a7aaaf,
+      /* top to left side */
+      -8px -8px 15px #fff;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 24px;
+    letter-spacing: .5px;
+  }
+    
+  .fields {
+    width: 100%;
+    padding: 15px 5px 5px 5px;
+  }
+  
+  .fields input {
+    border: none;
+    outline: none;
+    background: none;
+    color: #555;
+    padding: 20px 10px 20px 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow:
+      inset 8px 8px 8px #cbced1;
+    inset: -8px -8px 8px #fff;
+
+    height: 25px;
+    position: relative;
+    flex: 1 1 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    display: block;
+    width: 100%;
+  }
+  
+  .display-button {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+  }
+  
+  .submit-button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    text-align: center;
+    background: #ecf0f3;
+    box-shadow:
+      /* offset */
+      0px 0px 0px 5px #ecf0f3,
+      /* bottom to right side */
+      8px 8px 15px #a7aaaf,
+      /* top to left side */
+      -8px -8px 15px #fff;
+    transition: .5s;
+  }
+  
+  
+  
+  .submit-button:hover {
+    background: #49c5b6;
+  }

@@ -53,6 +53,7 @@
             <button 
             class="submit-button" 
             type="submit"
+            [disabled]="!authForm.valid"
             [ngClass]="{wrong: !authForm.valid}">{{ isLoginMode ? 'Login' : 'Sign Up'}}</button>
             <button 
             class="switch-button" 
