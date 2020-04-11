@@ -1,48 +1,40 @@
 <div>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand">PAYMENTS</a>
-            </div>
+           
+            <div class="collapse navbar-collapse">
 
-            <div class="navbar-collapse"> <!-- klasa collapse nie działa -->
-
-                <ul class="nav navbar-nav">
+                <ul class="navbar-nav">
                     <li>
-                        <a>Users</a></li>
+                        <a class="nav-link">Users</a></li>
                     <li>
-                        <a>Payments</a></li>
+                        <a class="nav-link">Payments</a></li>
                 </ul>
 
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav right-navbar">
                     <li>
-                        <a style="cursor: pointer;">LogOut</a>
+                        <a class="nav-link">Logout</a>
                     </li>
 
                     <li>
-                        <a style="cursor: pointer;">LogIn</a>
+                        <a class="nav-link">LogIn</a>
                     </li>
 
-                    <!-- <li>
-                        <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage<span
+                    <li>
+                        <a class="nav-link dropdown-toggle" role="button">Manage<span
                                 class="caret"></span></a>
 
                         <ul class="dropdown-menu">
-                            <li><a style="cursor: pointer;">Save</a></li>
-                            <li><a style="cursor: pointer;">Fetch Data</a></li>
+                            <li class="dropdown-item"><a class="nav-link">Save</a></li>
+                            <li class="dropdown-item"><a class="nav-link">Fetch Data</a></li>
                         </ul>
 
-                    </li> -->
+                    </li> 
                 </ul>
-
-
             </div>
-        </div>
     </nav>
-
-
 
     <router-outlet>
 

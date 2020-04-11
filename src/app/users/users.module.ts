@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UsersRoutingModule } from './users-routing.module';
 import { RegistrationComponent } from './registration/registration.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
     declarations:[
         UsersComponent,
-        RegistrationComponent
+        RegistrationComponent,
+        UsersListComponent
     ],
     imports:[
         FormsModule,
