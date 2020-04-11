@@ -25,9 +25,13 @@ export class UserService implements OnInit {
         }
     ]
 
-    constructor(){}
+    constructor() { }
 
-    ngOnInit(){
-        
+    ngOnInit() {
+
+    }
+
+    public findUsers(): User[] {
+        return this.usersList;
     }
 }
