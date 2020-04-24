@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { Component, ViewChild} from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { User } from '../user.model';
 
@@ -10,8 +10,10 @@ import { User } from '../user.model';
 })
 export class RegistrationComponent{
 
-    constructor(private http: HttpClientModule){}
+    constructor(private http: HttpClient){}
 
+    @ViewChild('registerForm',{static: true}) private form: NgForm;
+    
 
     onSubmit(registerForm: NgForm){
         const id: number = 0;
@@ -22,7 +24,12 @@ export class RegistrationComponent{
         const token: string = 'blablabla'
 
         const userToPost: User = new User(id,name,email,userName,password,token);
-console.log(userName);
+
         console.log(userToPost);
+       this.http.post('http://localhost:8080/api/users', userToPost)
+                    .subscribe((responseBody)=>{
+                        console.log(responseBody);
+                    });
+
     }
 }

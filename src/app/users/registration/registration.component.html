@@ -29,10 +29,12 @@
                             placeholder="Enter your Email"
                             ngModel
                             required
-                            email>
+                            email
+                            #email=ngModel>
                         </div>
                     </div>
                 </div>
+                <span id="emailInformation" *ngIf="(!email.valid && email.touched)"><p> Please enter valid email. Ex. example@gmail.com</p> </span>
 
                 <div>
                     <label for="username">Username</label>
@@ -54,10 +56,12 @@
                             <input 
                             type="password" 
                             class="form-control" 
-                            name="password" id="password"                        
+                            name="password" 
+                            id="password"                        
                             placeholder="Enter your Password"
                             ngModel
-                            required>
+                            required
+                            #password>
                         </div>
                     </div>
                 </div>
@@ -73,14 +77,19 @@
                             id="confirm"
                             placeholder="Confirm your Password"
                             ngModel
-                            required>
+                            required
+                            #confirm=ngModel>
                         </div>
                     </div>
                 </div>
+                <span id="confirmInformation" *ngIf="(confirm.value != password.value) && confirm.touched "><p> Please enter valid confirmation</p> </span>
             </div>
 
             <div class="display-button">
-                <button type="submit" class="submit-button">Register</button>
+                <button type="submit" 
+                class="submit-button"
+                [disabled]="!registerForm.valid"
+                [hidden]="!registerForm.valid || (confirm.value != password.value) ">Register</button>
             </div>
 
         </form>

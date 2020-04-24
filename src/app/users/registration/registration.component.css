@@ -117,3 +117,17 @@
   .submit-button:hover {
     background: #49c5b6;
   }
+  
+
+  /* styles to validation */
+
+  /* input.ng-invalid{
+  background-color: tomato;
+  } */
+
+
+  #emailInformation, #confirmInformation{
+    font-size: 12px;
+    color: tomato;
+    font-weight: 300;
+  }
