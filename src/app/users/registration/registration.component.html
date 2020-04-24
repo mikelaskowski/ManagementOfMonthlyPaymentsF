@@ -3,13 +3,18 @@
 
         <div class="title">REGISTRATION</div>
 <hr>
-        <form>
+        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
             <div class="fields">
                 <div>
                     <label for="name">Your Name</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name">
+                            <input type="text" class="form-control" 
+                            name="name" 
+                            id="name" 
+                            placeholder="Enter your Name"
+                            ngModel
+                            required>
                         </div>
                     </div>
                 </div>
@@ -18,7 +23,13 @@
                     <label for="email">Your Email</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email">
+                            <input type="text" class="form-control" 
+                            name="email" 
+                            id="email" 
+                            placeholder="Enter your Email"
+                            ngModel
+                            required
+                            email>
                         </div>
                     </div>
                 </div>
@@ -27,7 +38,11 @@
                     <label for="username">Username</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="username" id="username"                             placeholder="Enter your Username">
+                            <input type="text" class="form-control"
+                            name="userName" id="userName"                         
+                            placeholder="Enter your Username"
+                            ngModel
+                            required>
                         </div>
                     </div>
                 </div>
@@ -39,7 +54,10 @@
                             <input 
                             type="password" 
                             class="form-control" 
-                            name="password" id="password"                                placeholder="Enter your Password">
+                            name="password" id="password"                        
+                            placeholder="Enter your Password"
+                            ngModel
+                            required>
                         </div>
                     </div>
                 </div>
@@ -53,7 +71,9 @@
                             class="form-control" 
                             name="confirm" 
                             id="confirm"
-                            placeholder="Confirm your Password">
+                            placeholder="Confirm your Password"
+                            ngModel
+                            required>
                         </div>
                     </div>
                 </div>

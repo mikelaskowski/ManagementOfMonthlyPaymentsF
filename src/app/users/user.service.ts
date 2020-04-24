@@ -11,8 +11,8 @@ export class UserService implements OnInit {
             email: 'michal@wp.pl',
             userName: 'Scrappy',
             password: '12345s',
-            token: 'str11111111',
-            tokenExpirationDate: new Date()
+            token: 'str11111111'
+           // tokenExpirationDate: new Date()
         },
         {
             id: 2,
@@ -20,8 +20,8 @@ export class UserService implements OnInit {
             email: 'aaa@wp.pl',
             userName: 'Ziom',
             password: '123456',
-            token: 'str11111112',
-            tokenExpirationDate: new Date()
+            token: 'str11111112'
+           // tokenExpirationDate: new Date()
         }
     ]
 
