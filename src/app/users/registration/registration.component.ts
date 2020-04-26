@@ -2,6 +2,7 @@ import { Component, ViewChild} from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { User } from '../user.model';
+import { UserService } from '../user.service';
 
 @Component({
     selector: 'app-registration',
@@ -10,7 +11,8 @@ import { User } from '../user.model';
 })
 export class RegistrationComponent{
 
-    constructor(private http: HttpClient){}
+    constructor(private http: HttpClient,
+                private userService: UserService){}
 
     @ViewChild('registerForm',{static: true}) private form: NgForm;
     
@@ -26,8 +28,8 @@ export class RegistrationComponent{
         const userToPost: User = new User(id,name,email,userName,password,token);
 
         console.log(userToPost);
-       this.http.post('http://localhost:8080/api/users', userToPost)
-                    .subscribe((responseBody)=>{
+       this.userService.saveUser(userToPost)
+                       .subscribe((responseBody)=>{
                         console.log(responseBody);
                     });
 

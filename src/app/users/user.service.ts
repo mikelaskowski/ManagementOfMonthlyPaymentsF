@@ -1,5 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { User } from './user.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class UserService implements OnInit {
@@ -25,7 +27,7 @@ export class UserService implements OnInit {
         }
     ]
 
-    constructor() { }
+    constructor(private http: HttpClient) { }
 
     ngOnInit() {
 
@@ -34,4 +36,10 @@ export class UserService implements OnInit {
     public findUsers(): User[] {
         return this.usersList;
     }
+
+    public saveUser(user: User): Observable<Object>{
+       return this.http.post('http://localhost:8080/api/users',user);
+    }
+
+
 }

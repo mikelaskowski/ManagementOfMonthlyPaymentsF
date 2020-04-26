@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { UsersRoutingModule } from './users-routing.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import { UserService } from './user.service';
 
 @NgModule({
     declarations:[
@@ -21,6 +22,9 @@ import { UsersListComponent } from './users-list/users-list.component';
         HttpClientModule,
         RouterModule,
         UsersRoutingModule
-    ]
+    ],
+    providers: [
+        UserService
+      ]
 })
 export class UsersModule{}
