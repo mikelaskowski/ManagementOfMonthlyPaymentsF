@@ -1,21 +1,36 @@
-import { Component, ViewChild} from '@angular/core';
+import { Component, ViewChild, OnInit} from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { User } from '../user.model';
 import { UserService } from '../user.service';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-registration',
     templateUrl: './registration.component.html',
     styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent{
+export class RegistrationComponent implements OnInit{
+
+    public prepopulatedEmail: String;
+    public prepopulatedPassword: String;
 
     constructor(private http: HttpClient,
-                private userService: UserService){}
+                private userService: UserService,
+                private authService: AuthService,
+                private router: Router){}
 
     @ViewChild('registerForm',{static: true}) private form: NgForm;
     
+    
+    ngOnInit(){
+        this.authService.temporaryData.subscribe((temporaryData)=>{
+            this.prepopulatedEmail = (temporaryData.email);
+            this.prepopulatedPassword = (temporaryData.password);
+        });
+
+    }
 
     onSubmit(registerForm: NgForm){
         const id: number = 0;
@@ -32,6 +47,11 @@ export class RegistrationComponent{
                        .subscribe((responseBody)=>{
                         console.log(responseBody);
                     });
+
+        // clear
+        this.authService.temporaryData.unsubscribe();
+        registerForm.reset();
+        this.router.navigate(['auth']);
 
     }
 }

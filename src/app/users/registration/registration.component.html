@@ -27,7 +27,7 @@
                             name="email" 
                             id="email" 
                             placeholder="Enter your Email"
-                            ngModel
+                            [ngModel]="prepopulatedEmail"
                             required
                             email
                             #email=ngModel>
@@ -59,8 +59,9 @@
                             name="password" 
                             id="password"                        
                             placeholder="Enter your Password"
-                            ngModel
+                            [ngModel]='prepopulatedPassword'
                             required
+                            minlength="6"
                             #password>
                         </div>
                     </div>

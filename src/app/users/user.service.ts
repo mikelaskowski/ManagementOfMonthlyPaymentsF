@@ -6,26 +6,6 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class UserService implements OnInit {
 
-    usersList: User[] = [
-        {
-            id: 1,
-            name: 'Michal',
-            email: 'michal@wp.pl',
-            userName: 'Scrappy',
-            password: '12345s',
-            token: 'str11111111'
-           // tokenExpirationDate: new Date()
-        },
-        {
-            id: 2,
-            name: 'Andrzej',
-            email: 'aaa@wp.pl',
-            userName: 'Ziom',
-            password: '123456',
-            token: 'str11111112'
-           // tokenExpirationDate: new Date()
-        }
-    ]
 
     constructor(private http: HttpClient) { }
 
@@ -33,12 +13,25 @@ export class UserService implements OnInit {
 
     }
 
-    public findUsers(): User[] {
-        return this.usersList;
+    public findUsers(): Observable<Object> {
+        //return this.usersList;
+        return this.http.get<User[]>('http://localhost:8080/api/users');
+    }
+
+    public getUserById(id: number):Observable<Object>{
+        return this.http.get<User>('http://localhost:8080/api/users/'+id);
     }
 
     public saveUser(user: User): Observable<Object>{
-       return this.http.post('http://localhost:8080/api/users',user);
+       return this.http.post<User>('http://localhost:8080/api/users',user);
+    }
+
+    public updateUser(user: User): Observable<Object>{
+        return this.http.put<User>('http://localhost:8080/api/users',user);
+     }
+
+    public deleteUser(id: number): Observable<Object>{
+        return this.http.delete('http://localhost:8080/api/users/'+id);
     }
 
 
