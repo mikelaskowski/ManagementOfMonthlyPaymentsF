@@ -20,14 +20,30 @@ export class AuthComponent {
     onSubmit(formData: NgForm) {
         const email = formData.value.email;
         const password = formData.value.password;
+
         this.authService.temporaryData.next({email, password});
-        
-        
+
+        if(!formData.valid){
+            return;
+        }
+                
 
         if (!this.isLoginMode) {
             this.router.navigate(['users', 'registration']);
         }else{
-            this.router.navigate(['home']);
+            this.authService.login(email, password)
+                            .subscribe((userData)=>{
+                                console.log('=================');
+                                console.log(userData);
+                                console.log('=================');
+
+                            });
+            // this.authService.loggedUser.subscribe((test)=>{
+            //     console.log("test loggedUser from authService");
+            //     console.log(test);
+            // })
+
+            //this.router.navigate(['home']);
         };
     }
 

@@ -48,7 +48,7 @@ export class RegistrationComponent implements OnInit{
                         console.log(responseBody);
                     });
 
-        // clear
+        // clear all
         this.authService.temporaryData.unsubscribe();
         registerForm.reset();
         this.router.navigate(['auth']);
