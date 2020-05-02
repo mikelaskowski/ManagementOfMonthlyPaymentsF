@@ -19,12 +19,17 @@ export class RegistrationComponent implements OnInit{
     constructor(private http: HttpClient,
                 private userService: UserService,
                 private authService: AuthService,
-                private router: Router){}
+                private router: Router
+                ){}
 
     @ViewChild('registerForm',{static: true}) private form: NgForm;
     
     
     ngOnInit(){
+        console.log('z RegisterComponent')
+        // console.log(this.authService.loggedUser);
+        // console.log(this.authService.temporaryData);
+        // console.log(this.authService.test);
         this.authService.temporaryData.subscribe((temporaryData)=>{
             this.prepopulatedEmail = (temporaryData.email);
             this.prepopulatedPassword = (temporaryData.password);

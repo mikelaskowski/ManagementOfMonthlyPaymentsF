@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service'
 import { User } from '../user.model';
-import { map } from 'rxjs/operators';
 
 @Component({
     selector: 'app-users-list',
@@ -20,5 +19,7 @@ export class UsersListComponent implements OnInit {
                         console.log(responseData);
                         this.usersList=responseData;
                     });
+
+                
     }
 }

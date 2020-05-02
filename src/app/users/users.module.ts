@@ -22,8 +22,6 @@ import { UserService } from './user.service';
         HttpClientModule,
         RouterModule,
         UsersRoutingModule
-    ],
-    providers: [
-      ]
+    ]
 })
 export class UsersModule{}

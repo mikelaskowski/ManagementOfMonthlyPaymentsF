@@ -23,6 +23,7 @@ export class AuthComponent {
 
         this.authService.temporaryData.next({email, password});
 
+
         if(!formData.valid){
             return;
         }
@@ -36,6 +37,10 @@ export class AuthComponent {
                                 console.log('=================');
                                 console.log(userData);
                                 console.log('=================');
+                                // console.log(this.authService.loggedUser);
+
+                                // after login go to the userslist
+                                this.router.navigate(['users', 'userslist']);
 
                             });
             // this.authService.loggedUser.subscribe((test)=>{
