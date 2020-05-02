@@ -12,12 +12,14 @@ export class HeaderComponent{
 
   constructor(private authService: AuthService){}
 
-
   ngOnInit(){
     this.authService.loggedUser.subscribe((user) =>{
       this.isAuthenticated=!!user;
     });
+  }
 
+  onLogout(){
+    this.authService.logout();
   }
 
 }

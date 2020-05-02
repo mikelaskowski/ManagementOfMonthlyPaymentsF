@@ -17,6 +17,7 @@ export class AuthComponent {
         private router: Router,
         private authService: AuthService ) {}
 
+
     onSubmit(formData: NgForm) {
         const email = formData.value.email;
         const password = formData.value.password;
@@ -43,14 +44,12 @@ export class AuthComponent {
                                 this.router.navigate(['users', 'userslist']);
 
                             });
-            // this.authService.loggedUser.subscribe((test)=>{
-            //     console.log("test loggedUser from authService");
-            //     console.log(test);
-            // })
 
             //this.router.navigate(['home']);
         };
     }
+
+    
 
     onSwitchMode() {
         this.isLoginMode = !this.isLoginMode;
