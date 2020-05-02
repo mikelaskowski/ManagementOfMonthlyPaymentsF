@@ -14,11 +14,11 @@
 
         <ul class="nav navbar-nav right-navbar">
             <li>
-                <a class="nav-link">Logout</a>
+                <a class="nav-link" *ngIf="isAuthenticated">Logout</a>
             </li>
 
             <li>
-                <a class="nav-link" routerLink="/auth">LogIn</a>
+                <a class="nav-link" routerLink="/auth" *ngIf="!isAuthenticated">LogIn</a>
             </li>
 
             <li>
