@@ -8,6 +8,7 @@
         <th scope="col">Password</th>
         <th scope="col">Token</th>
         <th scope="col">Token Expiration Date</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,15 @@
         <td>{{user.password}}</td>
         <td>{{user.token}}</td>
         <td>{{user.tokenExpirationDate}}</td>
+        <td style="display: flex; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <div class="row">
+          <button type="button" class="btn btn-danger" (click)="onDelete(user.id)">Delete</button>
+          </div>
+          <div style="height: 2px;" class="row"></div>
+          <div class="row">
+          <button type="button" class="btn btn-primary" (click)="onUpdate(user.id)">Edit</button>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>

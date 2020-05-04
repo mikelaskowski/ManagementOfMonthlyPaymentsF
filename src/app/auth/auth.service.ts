@@ -13,9 +13,9 @@ export class AuthService implements OnInit {
 
 
   constructor(private http: HttpClient,
-    private router: Router) { }
+    private router: Router) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   public login(inputEmail: string, inputPassword: string): Observable<User> {
     console.log("z authService 1");
@@ -43,7 +43,7 @@ export class AuthService implements OnInit {
       return;
     }
   }
-  
+
 
   public logout() {
     // assign to loggedUser (BehaviourSubject() ) null

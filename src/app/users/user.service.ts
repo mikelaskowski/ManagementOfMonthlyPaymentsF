@@ -1,13 +1,15 @@
 import { Injectable, OnInit } from '@angular/core';
 import { User } from './user.model';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class UserService implements OnInit {
 
+  // public userListChg = new BehaviorSubject<User[]>(null);
 
-    constructor(private http: HttpClient) { }
+
+    constructor(private http: HttpClient) {}
 
     ngOnInit() {
 
