@@ -13,7 +13,7 @@
                             name="name" 
                             id="name" 
                             placeholder="Enter your Name"
-                            ngModel
+                            [ngModel]="prepopulatedName"
                             required>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             <input type="text" class="form-control"
                             name="userName" id="userName"                         
                             placeholder="Enter your Username"
-                            ngModel
+                            [ngModel]="prepopulatedUserName"
                             required>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                 <button type="submit" 
                 class="submit-button"
                 [disabled]="!registerForm.valid"
-                [hidden]="!registerForm.valid || (confirm.value != password.value) ">Register</button>
+                [hidden]="!registerForm.valid || (confirm.value != password.value) ">Save</button>
             </div>
 
         </form>

@@ -8,6 +8,8 @@ export class UserService implements OnInit {
 
   // public userListChg = new BehaviorSubject<User[]>(null);
 
+  public userToUpdate = new BehaviorSubject<User>(null);
+
 
     constructor(private http: HttpClient) {}
 

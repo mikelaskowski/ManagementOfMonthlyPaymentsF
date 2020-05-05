@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UserService } from '../user.service'
 import { User } from '../user.model';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-users-list',
@@ -11,9 +12,10 @@ import { Subscription } from 'rxjs';
 export class UsersListComponent implements OnInit, OnDestroy {
 
     private usersList: User[];
-    private subscription: Subscription;
+    //private subscription: Subscription;
 
-    constructor(private userService: UserService) { }
+    constructor(private userService: UserService,
+                private router: Router) { }
 
     ngOnInit() {
         this.userService.findUsers()
@@ -43,8 +45,10 @@ export class UsersListComponent implements OnInit, OnDestroy {
             });
     }
 
-    onUpdate(userId: number): void {
-        console.log(userId);
+    onUpdate(user: User): void {
+        this.userService.userToUpdate.next(user);
+        console.log(user);
+        this.router.navigate(['users','registration']);
     }
 
 
