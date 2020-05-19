@@ -24,11 +24,11 @@
                 <a class="nav-link" routerLink="/auth" *ngIf="!isAuthenticated">LogIn</a>
             </li>
 
-            <li>
-                <a class="nav-link dropdown-toggle" role="button">Manage<span
+            <li class="dropdown" >
+                <a class="nav-link dropdown-toggle" role="button" >Manage<span
                         class="caret"></span></a>
 
-                <ul class="dropdown-menu">
+                <ul class="dropdown-content" >
                     <li class="dropdown-item"><a class="nav-link">Save</a></li>
                     <li class="dropdown-item"><a class="nav-link">Fetch Data</a></li>
                 </ul>
@@ -36,5 +36,5 @@
             </li> 
         </ul>
     </div>
-</nav>
-    </div>
+    </nav>
+</div>
