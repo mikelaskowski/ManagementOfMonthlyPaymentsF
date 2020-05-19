@@ -9,11 +9,6 @@ export class Dropdown implements OnInit{
 constructor(private elementRef: ElementRef, private renderer:Renderer2){}
 
 @HostListener('click') toggleDropdownMenu(){
-    if(!this.isRolledDown){
-    this.renderer.setStyle(this.elementRef.nativeElement,'background-color', 'blue');
-    }else{
-        this.renderer.setStyle(this.elementRef.nativeElement,'background-color', 'tomato');
-    }
 
 this.isRolledDown=!this.isRolledDown;
 

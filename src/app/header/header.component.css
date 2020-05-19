@@ -24,6 +24,6 @@ li a {
     z-index: 1;
   }
   
-  /* .dropdown:hover .dropdown-content {
+  .open .dropdown-content {
     display: block;
-  } */
+  } 
