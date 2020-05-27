@@ -1,1 +1,15 @@
-<h1>From payments module</h1>
+<div class="col-md-12">
+    <button type="button" class="btn btn-success" (click)="onAdd()">Add</button>
+    &nbsp;
+    <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+    &nbsp;
+    <button type="button" class="btn btn-primary" (click)="onUpdate()">Edit</button>
+    &nbsp;
+    <button type="button" class="btn badge-primary" routerLink="/payments/paymentslist">Current Month</button>
+    &nbsp;
+    <button type="button" class="btn badge-primary" routerLink="/payments/paymentshistory">History</button>
+</div>
+
+<router-outlet>
+
+</router-outlet>
