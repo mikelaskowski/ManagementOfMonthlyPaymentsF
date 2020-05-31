@@ -11,7 +11,7 @@ import { PaymentsHistoryComponent } from './payments-history/payments-history';
     declarations:[
         PaymentsComponent,
         PaymentsListComponent,
-        PaymentsHistoryComponent
+        PaymentsHistoryComponent,
     ],
     imports:[
        FormsModule,
